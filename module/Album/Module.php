@@ -7,6 +7,8 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 {
     public function getAutoloaderConfig()
     {
+//use composer autoloader
+/*
         return array(
             'Zend\Loader\ClassMapAutoloader' => array(
                 __DIR__ . '/autoload_classmap.php',
@@ -17,6 +19,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
                 ),
             ),
         );
+*/
     }
 
     public function getConfig()
