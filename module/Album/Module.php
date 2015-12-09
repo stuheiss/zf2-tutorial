@@ -1,3 +1,4 @@
+<?php
 namespace Album;
 
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
