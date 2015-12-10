@@ -9,3 +9,5 @@ nbproject
 composer.lock
 vendor/bin
 vendor/
+tests/_*
+tests/*/_*
