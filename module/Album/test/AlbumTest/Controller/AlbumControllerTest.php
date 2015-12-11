@@ -11,20 +11,9 @@ class AlbumControllerTest extends AbstractHttpControllerTestCase
     public function setUp()
     {
         $this->setApplicationConfig(
-            include '/srv/httpd/www.awesome.dev/zf2-tutorial/config/application.config.php'
+            include 'config/application.config.php'
         );
         parent::setUp();
-    }
-
-    public function _testIndexActionCanBeAccessed()
-    {
-        $this->dispatch('/album');
-        $this->assertResponseStatusCode(200);
-
-        $this->assertModuleName('Album');
-        $this->assertControllerName('Album\Controller\Album');
-        $this->assertControllerClass('AlbumController');
-        $this->assertMatchedRouteName('album');
     }
 
     public function testIndexActionCanBeAccessed()
@@ -118,6 +107,7 @@ class AlbumControllerTest extends AbstractHttpControllerTestCase
             'title'  => 'Led Zeppelin III',
             'artist' => 'Led Zeppelin',
             'id'     => '',
+            'del'    => 'Yes',
         );
         $this->dispatch('/album/delete/1', 'POST', $postData);
         $this->assertResponseStatusCode(302);
