@@ -15,7 +15,9 @@ extensions:
 modules:
     config:
         Db:
-            dsn: ''
-            user: ''
-            password: ''
-            dump: tests/_data/dump.sql
+            dsn: 'mysql:host=localhost;dbname=zf2tutorial'
+            user: 'zf2'
+            password: '123456'
+            dump: tests/_data/zf2tutorial.sql
+            populate: false
+            cleanup: false
